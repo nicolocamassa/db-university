@@ -48,3 +48,11 @@ FROM `courses`
 WHERE `website` IS NOT NULL 
 AND `cfu` BETWEEN 9 and 12 
 AND `year` = 1; 
+
+
+----------------------07/02/2024----------------------
+-----------------------GROUP BY-----------------------
+1. Contare quanti iscritti ci sono stati ogni anno
+SELECT YEAR(`enrolment_date`) AS `enrolment_year`, COUNT(`enrolment_date`) AS `date_count` 
+FROM `students` 
+GROUP BY `enrolment_year`; 
